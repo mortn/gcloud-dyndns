@@ -1,0 +1,14 @@
+[Unit]
+Description=Google Cloud DNS dynamic updater
+Requires=systemd-networkd.socket
+After=systemd-networkd.socket
+
+[Service]
+ExecStartPre=/lib/systemd/systemd-networkd-wait-online --interface=wan
+ExecStart=/usr/local/bin/gdns.sh
+User=morten
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
