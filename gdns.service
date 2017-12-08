@@ -6,7 +6,7 @@ After=systemd-networkd.socket
 [Service]
 ExecStartPre=/lib/systemd/systemd-networkd-wait-online --interface=wan
 ExecStart=/usr/local/bin/gdns.sh
-User=morten
+User=YOURUSER
 Type=oneshot
 RemainAfterExit=true
 
