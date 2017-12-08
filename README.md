@@ -4,7 +4,7 @@
 * Install gcloud (https://cloud.google.com/sdk/docs/quickstarts)
 * Configure gcloud to hook into your Google Cloud setup
 * Copy *gdns.service* to */etc/systemd/system/*.
-  Make sure you change *YOURUSER* to the user where gcloud finds *~/.config/glcoud-files*.
+  Change *YOURUSER* to the user where gcloud finds *~/.config/glcoud/*.
   Run `systemctl enable gdns`
 * Copy *gdns.sh* to */usr/local/bin/* and change *project*, *zoneid*, *zone*, and *arec* variables to reflect your setup
 
